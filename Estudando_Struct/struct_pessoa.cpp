@@ -31,7 +31,7 @@ int main() {
 		printf("4. Classifica Fone.\n");
 		printf("5. Mostrar Dados.\n");
 		printf("6. Fim.\n");
-		printf("opÃ§Ã£o: ");
+		printf("opção: ");
 		scanf("%d", &opc);
 		switch (opc){
 			case 1: entrada_dados(); break;
@@ -51,18 +51,23 @@ void entrada_dados() {
 		printf("ENTRADA DE DADOS\n");
 		printf("1. Inserir dados de uma pessoa.\n");
 		printf("2. Voltar ao menu principal.\n");
-		printf("opÃ§Ã£o: ");
+		printf("opção: ");
 		scanf("%d", &opt);
+		getchar();
 		switch (opt) {
-			case 1: 
-				printf("Nome: ");
-				scanf("%s", pe[mem].nome);
-				printf("Telefone: ");
-				scanf("%s", pe[mem].fone);
-				printf("Idade: ");
-				scanf("%d", &pe[mem].idade);
-				mem++;
-				break;
+			case 1:
+			printf("Nome: ");
+			fgets(pe[mem].nome, sizeof(pe[mem].nome), stdin);
+			pe[mem].nome[strcspn(pe[mem].nome, "\n")] = 0;
+			fflush(stdin);
+			printf("Telefone: ");
+			fgets(pe[mem].fone, sizeof(pe[mem].fone), stdin);
+			pe[mem].fone[strcspn(pe[mem].fone, "\n")] = 0;
+			fflush(stdin);
+			printf("Idade: ");
+			scanf("%d", &pe[mem].idade);
+			mem++;
+			break;
 			case 2: break;
 		}
 	} while (opt != 2 && mem < tot);
