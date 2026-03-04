@@ -32,7 +32,7 @@ int main() {
 	printf("   Vlr onde ptr1 aponta = %d\n", x);
 	printf("   Vlr onde ptr2 aponta = %d\n", y);
 	printf("   Vlr onde ptr3 aponta = %d\n", z);
-	printf("   Vlr onde ptr4 aponta = %d\n", tc);
+	printf("   Vlr onde ptr4 aponta = %c\n", tc);
 	printf("   Vlr onde ptrN aponta = %d\n", N);
 	printf("-------------------------------------------------------\n");
 	printf("   End. Mem. onde ptr1 aponta = %p\n", &x);
