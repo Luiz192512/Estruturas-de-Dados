@@ -24,8 +24,8 @@ int main() {
 	printf("                     End. ponteiro de idade = %p\n", &i);
 	printf("         End. de ponteiro de ponteiro idade = %p\n", &ii);
 	printf("-------------------------------------------------------\n");
-	printf("          End. onde ponteiro de nome aponta = %p\n", &p);
-	printf("End. de ponteiro de ponteiro de nome aponta = %p\n", &*pp);
+	printf("          End. onde ponteiro de nome aponta = %p\n", &*p);
+	printf("End. de ponteiro de ponteiro de nome aponta = %p\n", &**pp);
 	printf("-------------------------------------------------------\n");
 	
 }
